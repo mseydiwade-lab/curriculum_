@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV — Mame Seydi WADE</title>
+  <style>
+    :root{
+      --accent:#0b63a8;
+      --muted:#6b7280;
+      --bg:#f7fbff;
+      --card:#ffffff;
+      --radius:12px;
+      --max-width:900px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:#0f1724;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{margin:24px;background:linear-gradient(180deg,var(--bg),#ffffff);display:flex;justify-content:center;align-items:center;min-height:100vh;}
+    .cv{display:flex;flex-direction:row;width:100%;max-width:var(--max-width);background:var(--card);border-radius:var(--radius);box-shadow:0 6px 30px rgba(16,24,40,0.08);overflow:hidden;}
+
+    /* Left column */
+    .cv__left{width:35%;background:linear-gradient(180deg,var(--accent),#0b4f85);color:white;padding:28px 22px;display:flex;flex-direction:column;align-items:center;text-align:center;}
+    .photo{width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;margin-bottom:18px}
+    h1{font-size:22px;margin:0 0 6px}
+    .muted{color:rgba(255,255,255,0.85);font-weight:500;margin-bottom:16px}
+    .label{font-size:13px;letter-spacing:0.6px;margin-top:18px;color:rgba(255,255,255,0.9);font-weight:600;text-transform:uppercase}
+    .info{font-size:14px;margin-top:6px;color:rgba(255,255,255,0.95)}
+    .skill{margin:8px 0;width:100%}
+    .skill__bar{height:8px;background:rgba(255,255,255,0.18);border-radius:999px;overflow:hidden}
+    .skill__fill{height:100%;background:rgba(255,255,255,0.95);display:block}
+    .lang{display:flex;flex-direction:column;gap:6px;margin-top:6px;font-size:14px}
+
+    /* Right column */
+    .cv__right{width:65%;padding:32px;display:flex;flex-direction:column;justify-content:flex-start;}
+    section{margin-bottom:18px}
+    .section__title{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--accent);margin-bottom:8px;font-size:16px}
+    .section__title::before{content:'';width:10px;height:10px;background:var(--accent);border-radius:2px;display:inline-block}
+    p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+    .job{margin-bottom:12px}
+    .job__meta{font-weight:700;color:#111827;font-size:15px}
+    ul{margin:8px 0 0 18px;color:var(--muted)}
+    .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+
+    /* Responsive */
+    @media (max-width:780px){
+      .cv{flex-direction:column}
+      .cv__left,.cv__right{width:100%}
+      .photo{margin:auto}
+    }
+
+    /* Print */
+    @media print{
+      body{background:white;margin:0}
+      .cv{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <article class="cv" role="document">
+    <aside class="cv__left" aria-label="Informations personnelles">
+      <div class="photo" aria-hidden="true">MS</div>
+      <h1>Mame Seydi WADE</h1>
+      <div class="muted">Étudiant · Licence 2 Informatique</div>
+
+      <div class="label">Contact</div>
+      <div class="info">Dakar, Sénégal<br>[ton.telephone@example.com] · +221 [numéro]</div>
+
+      <div class="label">Objectif</div>
+      <div class="info">Recherche un stage en programmation pour renforcer mes compétences pratiques et découvrir le milieu professionnel.</div>
+
+      <div class="label">Compétences</div>
+      <div class="skill">
+        <div style="display:flex;justify-content:space-between;font-size:13px"><span>Word & PowerPoint</span><span style="opacity:.9">70%</span></div>
+        <div class="skill__bar"><span class="skill__fill" style="width:70%"></span></div>
+      </div>
+      <div class="skill">
+        <div style="display:flex;justify-content:space-between;font-size:13px"><span>C</span><span style="opacity:.9">60%</span></div>
+        <div class="skill__bar"><span class="skill__fill" style="width:60%"></span></div>
+      </div>
+      <div class="skill">
+        <div style="display:flex;justify-content:space-between;font-size:13px"><span>HTML & CSS</span><span style="opacity:.9">65%</span></div>
+        <div class="skill__bar"><span class="skill__fill" style="width:65%"></span></div>
+      </div>
+
+      <div class="label">Langues</div>
+      <div class="lang">
+        <div>Wolof — Langue maternelle</div>
+        <div>Français — Courant</div>
+        <div>Anglais — Bon niveau</div>
+      </div>
+
+      <div class="label">Centres d'intérêt</div>
+      <div class="info">Programmation · Jeux vidéo · Football</div>
+    </aside>
+
+    <main class="cv__right" aria-label="Expérience et formation">
+      <section>
+        <div class="section__title">Formation</div>
+        <div class="job">
+          <div class="job__meta">Licence 2 Informatique — Université [Nom de l'université]</div>
+          <div class="job__sub">2024 — en cours</div>
+        </div>
+        <div class="job">
+          <div class="job__meta">Baccalauréat — Série [préciser]</div>
+          <div class="job__sub">[Année d'obtention]</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section__title">Expérience</div>
+        <div class="job">
+          <div class="job__meta">Vendeur de pièces détachées — Entreprise [Nom]</div>
+          <div class="job__sub">[Ville] · [Année]</div>
+          <ul>
+            <li>Accueil et conseil client, gestion de petites transactions.</li>
+            <li>Inventaire et suivi des produits, travail en équipe.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="job__meta">Projets académiques</div>
+          <ul>
+            <li>Petit projet en C (algorithmes simples) — logique et structures de base.</li>
+            <li>Pages web en HTML/CSS — maquettes et mise en forme.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="section__title">Compétences complémentaires</div>
+        <div class="skills-grid">
+          <div>
+            <strong>Bureautique</strong>
+            <p>Word, PowerPoint — création de CV et présentations.</p>
+          </div>
+          <div>
+            <strong>Programmation</strong>
+            <p>C, HTML, CSS — bases solides et envie d'apprendre davantage.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="section__title">Profil</div>
+        <p>Étudiant motivé, curieux et sérieux, cherchant à acquérir une première expérience professionnelle en développement et programmation. Bon relationnel grâce à une expérience dans la vente.</p>
+      </section>
+
+      <section>
+        <div class="section__title">Disponibilité</div>
+        <p>Disponible pour un stage dès que possible — durée et dates à préciser selon l'entreprise.</p>
+      </section>
+    </main>
+  </article>
+</body>
+</html>

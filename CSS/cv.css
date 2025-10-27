@@ -1,0 +1,122 @@
+body {
+  background: white;  
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  margin: 14px;
+}
+
+.cv {
+  display: flex;
+  width: 90%;         
+  max-width: 1050px;   
+  height: 110vh;     
+  overflow: hidden;  
+}
+
+.gauche {
+  background: yellowgreen;
+  color: white;
+  width: 35%;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.droite {
+  width:75%;
+  height: 140vh;
+  padding:40px;
+  justify-content: flex-start;
+  background-color: whitesmoke;
+  font-size: 15px;
+}
+
+.me{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;       /* rend la photo ronde */
+  overflow: hidden;         /* cache les coins qui dépassent */
+  margin: 0 auto 20px auto; /* centre la photo et ajoute un espace en bas */
+}
+.me img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* remplit bien le cercle sans déformer */
+  display: block;
+}
+h2{
+    font-size: 22px;
+    margin-bottom: 3px;
+    text-align: center;
+}
+.niveau{
+    color: whitesmoke;
+    font-weight:500;
+    margin-bottom:10px;
+    text-align: center;
+}
+.label{
+    font-size:13px;
+    letter-spacing:0.6px;
+    margin-top:10px;
+    color:whitesmoke;
+    font-weight:600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.niveau, .label{
+    margin: 3px 0;
+}
+.info{
+    font-size:14px;
+    margin-top:6px;
+    color: whitesmoke;
+    text-align: center;
+}
+.skill{
+    margin: 8px 0;
+    width: 100%;
+}
+.skill__bar{
+    height: 8px;
+    background:rgba(255,255,255,0.18);
+    border-radius: 999px;
+    overflow: hidden;
+}
+.skill__fill{height: 100%;
+    background:rgba(255,255,255,0.95);
+    display: block;
+}
+.langue{display: flex;
+    flex-direction: column;
+    gap: 6px; 
+    margin-top: 6px;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+  .cv {
+    flex-direction: column; /* une partie au-dessus de l'autre */
+    width: 95%; /* un peu plus large pour les petits écrans */
+  }
+
+.gauche, .droite {
+    flex: none;
+    width: 100%; /* prend toute la largeur */
+  }
+
+.gauche {
+    text-align: center; /* recentre ton contenu (photo, texte) */
+  }
+
+.droite {
+    padding: 20px;
+  }
+.me{
+  width: 5100px;
+  height: 100px;
+  margin-bottom: 16px;       /* rend la photo ronde */
+
+}
+}

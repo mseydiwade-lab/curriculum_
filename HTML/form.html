@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <legend>formulaire d'inscription</legend>
+    <form action="" method="get">
+        <label for ="nom">Entrez votre nom</label>
+        <input type="text" name="nom" id="n1" required>
+        <br>
+        <label for="prenom">Entrez votre prenom</label>
+        <input type="text" name="prenom" id="p1" maxlength="30" required>
+        <br>
+        <label for="pswd">Entrez votre mot de passe</label>
+        <input type="password" name="pswd" id="pswd1" required>
+        <br>
+        <label for="plat">Choisissez votre plat</label><br>
+        <input type="checkbox" name="plat" id="plat1" value="yassa">
+        <label for="yassa">YASSA</label><br>
+        <input type="checkbox" name="plat" id="plat2" value="maffe">
+        <label for="maffe">MAFFE</label><br>
+        <input type="checkbox" name="plat" id="plat3" value="mbakhal">
+        <label for="mbakhal">MBAKHAL</label><br>
+        <label for="statut">Etes vous mariez ?</label><br>
+        <input type="radio" name="statut" id="statut1" value="MARIE">
+         <label for="MARIE">OUI</label><br>
+         <input type="radio" name="statut" id="statut2" value="CELIBATAIRE">
+         <label for="celibataire">NON</label><br>
+         <input type="file">
+         <label for="UFR">Choisir votre UFR</label>
+         <select name="UFR"><br>
+            <option value="IUT">IUT</option>
+            <option value="SI">SI</option>
+            <option value="SES">SES</option>
+            <option value="SET" selected>SET</option>
+         </select><br>
+         <input type="submit"><br>
+         <input type="reset">
+    </form>
+</body>
+</html>
