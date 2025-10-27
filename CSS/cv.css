@@ -32,17 +32,18 @@ body {
   font-size: 15px;
 }
 
+/* Photo de profil ronde et responsive */
 .me{
   width: 130px;
   height: 130px;
-  border-radius: 50%;       /* rend la photo ronde */
-  overflow: hidden;         /* cache les coins qui dépassent */
-  margin: 0 auto 20px auto; /* centre la photo et ajoute un espace en bas */
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
 }
 .me img {
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* remplit bien le cercle sans déformer */
+  object-fit: cover;
   display: block;
 }
 h2{
@@ -95,28 +96,50 @@ h2{
     margin-top: 6px;
     font-size: 14px;
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .cv {
-    flex-direction: column; /* une partie au-dessus de l'autre */
-    width: 95%; /* un peu plus large pour les petits écrans */
+    flex-direction: column;
+    width: 98%;
+    height: auto;
+    min-width: 0;
   }
-
-.gauche, .droite {
-    flex: none;
-    width: 100%; /* prend toute la largeur */
+  .gauche, .droite {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
-
-.gauche {
-    text-align: center; /* recentre ton contenu (photo, texte) */
+  .gauche {
+    text-align: center;
+    padding: 20px 10px;
   }
-
-.droite {
-    padding: 20px;
+  .droite {
+    padding: 20px 10px;
+    height: auto;
   }
-.me{
-  width: 5100px;
-  height: 100px;
-  margin-bottom: 16px;       /* rend la photo ronde */
-
+  .me {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 16px;
+  }
 }
+
+@media (max-width: 500px) {
+  body {
+    margin: 2px;
+  }
+  .cv {
+    width: 100%;
+    padding: 0;
+  }
+  .gauche, .droite {
+    padding: 10px 2px;
+    font-size: 13px;
+  }
+  h2 {
+    font-size: 17px;
+  }
+  .me {
+    width: 70px;
+    height: 70px;
+  }
 }
